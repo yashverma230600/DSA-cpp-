@@ -60,6 +60,18 @@ void display(node* head){
 
 }
 
+bool search(node* head, int key){
+    node* temp=  head;
+    while(temp!=NULL){
+        if(temp->data==key)
+        {
+            return true;
+        }
+        temp=temp->next;
+    }
+    return false;
+}
+
 
 int main(){
 
@@ -70,6 +82,7 @@ int main(){
     display(head);
     insetAtHead(head,4);
     display(head);
+    cout<<search(head,3)<<endl;
 
 return 0;
 }
